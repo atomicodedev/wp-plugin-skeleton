@@ -16,7 +16,7 @@
         "install-deps": "composer install --no-dev --optimize-autoloader --no-progress"
     },
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.4",
         "alleyinteractive/composer-wordpress-autoloader": "^1.0"
     },
 	"require-dev": {

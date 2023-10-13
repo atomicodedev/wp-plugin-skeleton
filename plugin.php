@@ -3,7 +3,7 @@
  * Plugin Name:       Plugin name
  * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 6.3
- * Requires PHP:      7.1
+ * Requires PHP:      7.4
  * Version:           0.1.0
  * Author:            Jean Paiva
  * License URI:       https://www.mit.edu/~amini/LICENSE.md
