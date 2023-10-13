@@ -17,12 +17,14 @@
 		"lint:fix": "wp-scripts lint-js --fix",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
+        "install-deps": "npm install --omit=dev",
 		"start": "wp-scripts start --webpack-copy-php",
 		"env": "wp-env",
 		"env:start": "npm run env start",
 		"env:stop": "npm run env stop",
 		"env:clear": "npm run env clean all"
 	},
+    "files": [ "vendor", "includes", "build", "plugin.php" ],
 	"devDependencies": {
 		"@wordpress/block-editor": "^12.10.0",
 		"@wordpress/blocks": "^12.19.0",

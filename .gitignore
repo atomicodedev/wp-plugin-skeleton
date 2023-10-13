@@ -33,5 +33,3 @@ vendor/
 
 # custom
 .idea
-package-lock.json
-composer.lock
