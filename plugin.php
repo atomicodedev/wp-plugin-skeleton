@@ -6,7 +6,7 @@
  * Requires PHP:      7.1
  * Version:           0.1.0
  * Author:            Jean Paiva
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License URI:       https://www.mit.edu/~amini/LICENSE.md
  * Text Domain:       plugin-domain
  *
  * @package           plugin-domain

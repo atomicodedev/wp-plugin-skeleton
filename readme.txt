@@ -3,7 +3,7 @@ Contributors:      Jean Paiva
 Tags:              block
 Tested up to:      6.3
 Stable tag:        0.1.0
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+License URI:       https://www.mit.edu/~amini/LICENSE.md
 
 Example block scaffolded with Create Block tool.
 

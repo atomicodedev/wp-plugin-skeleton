@@ -2,7 +2,7 @@
     "name": "plugin/name",
     "description": "Plugin name",
     "type": "project",
-    "license": "GPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jean Paiva",
@@ -37,9 +37,11 @@
             "alleyinteractive/composer-wordpress-autoloader": true
 		}
 	},
-    "autoload": {
-        "wordpress": {
-            "Plugin\\": "includes/"
+    "extra": {
+        "wordpress-autoloader": {
+            "autoload": {
+              "Plugin\\": "includes/"
+            }
         }
     }
 }
