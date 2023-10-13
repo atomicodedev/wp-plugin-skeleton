@@ -122,9 +122,14 @@ jobs:
       - name: Create zip file
         run: npm run plugin-zip
 
+      - name: Prepare to upload package
+        uses: montudor/action-zip@v1
+        with:
+          args: unzip -qq ${{ github.event.inputs.name }}.zip package/
+
       - name: Upload the package
         uses: actions/upload-artifact@v3.1.0
         with:
           name: ${{ github.event.inputs.name }}
-          path: ${{ github.event.inputs.name }}.zip
+          path: package/
           retention-days: 1
