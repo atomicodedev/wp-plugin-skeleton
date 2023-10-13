@@ -113,8 +113,6 @@ jobs:
 
       - name: Download NPM deps
         uses: bahmutov/npm-install@v1
-        env:
-          NODE_ENV: production
         with:
           useLockFile: false
 

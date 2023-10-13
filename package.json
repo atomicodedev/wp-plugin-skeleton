@@ -17,7 +17,6 @@
 		"lint:fix": "wp-scripts lint-js --fix",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-        "install-deps": "npm install --omit=dev",
 		"start": "wp-scripts start --webpack-copy-php",
 		"env": "wp-env",
 		"env:start": "npm run env start",
@@ -25,13 +24,11 @@
 		"env:clear": "npm run env clean all"
 	},
     "files": [ "vendor", "includes", "build", "plugin.php" ],
-    "dependencies": {
-        "@wordpress/scripts": "^26.13.0"
-    },
 	"devDependencies": {
 		"@wordpress/block-editor": "^12.10.0",
 		"@wordpress/blocks": "^12.19.0",
 		"@wordpress/env": "^8.8.0",
+        "@wordpress/scripts": "^26.13.0",
 		"@wordpress/eslint-plugin": "^16.0.0",
 		"@wordpress/i18n": "^4.42.0",
 		"@wordpress/prettier-config": "^2.25.0",
