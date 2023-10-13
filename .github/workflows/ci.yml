@@ -127,7 +127,6 @@ jobs:
       - name: Build zip package
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: ${{ github.event.inputs.name }}
-          path: |
-            package/
+          name: plugin-name.zip
+          path: plugin-name.zip
           retention-days: 1
