@@ -1,15 +1,6 @@
 name: Plugin CI
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Package name'
-        default: 'plugin'
-        required: true
-      build-package:
-        type: boolean
-        default: false
-        description: Build the zip package
 
   push:
     branches:
@@ -86,47 +77,3 @@ jobs:
       - name: Lint
         if: steps.php-files.outputs.any_changed == 'true'
         run: composer run-script lint
-
-  build-package:
-    name: Build package
-    runs-on: ubuntu-latest
-    needs: [js-lint, php-lint]
-    if: github.event.inputs.build-package == 'true'
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 7.4
-
-      - name: Download Composer deps
-        uses: ramsey/composer-install@v2
-        with:
-          composer-options: "--no-dev --optimize-autoloader --no-progress"
-
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Download NPM deps
-        uses: bahmutov/npm-install@v1
-        with:
-          useLockFile: false
-
-      - name: Build files
-        run: npm run build
-
-      - name: Upload the package
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          name: ${{ github.event.inputs.name }}
-          path: |
-            vendor/
-            includes/
-            build/
-            plugin.php
-            readme.txt
-          retention-days: 1
